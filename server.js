@@ -5,8 +5,8 @@ const routes = require("./controllers/burgers_controller.js");
 const app = express();
 var port = process.env.PORT || 3000;
 
-//app.use(express.static("public"));
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static("public"));
+//app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: false }));
 
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
